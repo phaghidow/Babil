@@ -1654,6 +1654,26 @@ public class BookstorePage extends JPanel {
 
     private java.awt.image.BufferedImage createCover(Map<String, String> book,
             int width, int height) {
+        String coverPath = value(book, "coverUrl", "");
+        if (!coverPath.isBlank() && !coverPath.startsWith("http://")
+                && !coverPath.startsWith("https://")) {
+            File coverFile = new File(coverPath);
+            if (coverFile.isFile()) {
+                try {
+                    BufferedImage coverImage = ImageIO.read(coverFile);
+                    if (coverImage != null) {
+                        return resizeCover(coverImage, width, height);
+                    }
+                    System.err.println("Unsupported book cover image: " + coverPath);
+                } catch (IOException e) {
+                    System.err.println("Could not read book cover " + coverPath + ": "
+                            + e.getMessage());
+                }
+            } else {
+                System.err.println("Book cover image not found: " + coverPath);
+            }
+        }
+
         java.awt.image.BufferedImage image = new java.awt.image.BufferedImage(
                 width, height, java.awt.image.BufferedImage.TYPE_INT_RGB);
         Graphics2D g = image.createGraphics();
@@ -1677,6 +1697,24 @@ public class BookstorePage extends JPanel {
                 width - 38, Math.max(13, width / 14));
         g.dispose();
         return image;
+    }
+
+    private BufferedImage resizeCover(BufferedImage source, int width, int height) {
+        BufferedImage cover = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
+        Graphics2D g = cover.createGraphics();
+        g.setRenderingHint(RenderingHints.KEY_INTERPOLATION,
+                RenderingHints.VALUE_INTERPOLATION_BICUBIC);
+        g.setRenderingHint(RenderingHints.KEY_RENDERING,
+                RenderingHints.VALUE_RENDER_QUALITY);
+        double scale = Math.max((double) width / source.getWidth(),
+                (double) height / source.getHeight());
+        int scaledWidth = (int) Math.ceil(source.getWidth() * scale);
+        int scaledHeight = (int) Math.ceil(source.getHeight() * scale);
+        int x = (width - scaledWidth) / 2;
+        int y = (height - scaledHeight) / 2;
+        g.drawImage(source, x, y, scaledWidth, scaledHeight, null);
+        g.dispose();
+        return cover;
     }
 
     private static BufferedImage loadHeroImage() {

@@ -1,6 +1,7 @@
 package Models;
 
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Locale;
@@ -16,17 +17,41 @@ public final class PortfolioCatalogSeeder {
 
     public static int seedIfNeeded(BookDAO bookDAO) throws IOException {
         List<Map<String, String>> existingBooks = bookDAO.getAllBooks();
+        Set<String> existingTitles = new HashSet<>();
+        Map<String, Map<String, String>> catalogByTitle = new HashMap<>();
+        List<Map<String, String>> portfolioBooks =
+                JsonToSqliteMigration.loadBooksFromJson("data/portfolio_books.json");
+        for (Map<String, String> book : portfolioBooks) {
+            catalogByTitle.put(book.getOrDefault("title", "").trim()
+                    .toLowerCase(Locale.ROOT), book);
+        }
+
+        for (Map<String, String> book : existingBooks) {
+            String titleKey = book.getOrDefault("title", "").trim().toLowerCase(Locale.ROOT);
+            existingTitles.add(titleKey);
+            if (book.getOrDefault("keywords", "").contains(CATALOG_MARKER)) {
+                Map<String, String> catalogBook = catalogByTitle.get(titleKey);
+                boolean metadataChanged = catalogBook != null
+                        && (!catalogBook.getOrDefault("coverUrl", "")
+                                .equals(book.getOrDefault("coverUrl", ""))
+                        || !catalogBook.getOrDefault("type", "Other")
+                                .equals(book.getOrDefault("type", "Other"))
+                        || !(CATALOG_MARKER + ", "
+                                + catalogBook.getOrDefault("keywords", ""))
+                                .equals(book.getOrDefault("keywords", "")));
+                if (metadataChanged
+                        && !bookDAO.updatePortfolioBook(
+                                Integer.parseInt(book.get("id")), catalogBook, CATALOG_MARKER)) {
+                    throw new IOException("Could not update portfolio book: "
+                            + catalogBook.get("title"));
+                }
+            }
+        }
+
         if (existingBooks.size() >= TARGET_BOOK_COUNT) {
             return 0;
         }
 
-        Set<String> existingTitles = new HashSet<>();
-        for (Map<String, String> book : existingBooks) {
-            existingTitles.add(book.getOrDefault("title", "").trim().toLowerCase(Locale.ROOT));
-        }
-
-        List<Map<String, String>> portfolioBooks =
-                JsonToSqliteMigration.loadBooksFromJson("data/portfolio_books.json");
         int added = 0;
         for (Map<String, String> book : portfolioBooks) {
             if (existingBooks.size() + added >= TARGET_BOOK_COUNT) {

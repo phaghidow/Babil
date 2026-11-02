@@ -8,9 +8,9 @@
     "summary": "Elizabeth Bennet and Mr Darcy confront first impressions, family expectations, and the possibility of love.",
     "pages": "432",
     "publisher": "Project Gutenberg",
-    "type": "Romance",
-    "keywords": "public-domain, gutenberg:1342, classic, original-cover",
-    "coverUrl": ""
+    "type": "Classics",
+    "keywords": "public-domain, gutenberg:1342, classic, project-gutenberg-cover",
+    "coverUrl": "data/covers/pg1342.jpg"
   },
   {
     "title": "The Adventures of Sherlock Holmes",
@@ -22,8 +22,8 @@
     "pages": "307",
     "publisher": "Project Gutenberg",
     "type": "Mystery",
-    "keywords": "public-domain, gutenberg:1661, detective, original-cover",
-    "coverUrl": ""
+    "keywords": "public-domain, gutenberg:1661, detective, project-gutenberg-cover",
+    "coverUrl": "data/covers/pg1661.jpg"
   },
   {
     "title": "Frankenstein",
@@ -34,9 +34,9 @@
     "summary": "Victor Frankenstein's experiment raises enduring questions about creation, responsibility, and belonging.",
     "pages": "280",
     "publisher": "Project Gutenberg",
-    "type": "Gothic Fiction",
-    "keywords": "public-domain, gutenberg:84, gothic, science, original-cover",
-    "coverUrl": ""
+    "type": "Gothic & Horror",
+    "keywords": "public-domain, gutenberg:84, gothic, science, project-gutenberg-cover",
+    "coverUrl": "data/covers/pg84.jpg"
   },
   {
     "title": "Alice's Adventures in Wonderland",
@@ -48,8 +48,8 @@
     "pages": "192",
     "publisher": "Project Gutenberg",
     "type": "Children's Classics",
-    "keywords": "public-domain, gutenberg:11, fantasy, original-cover",
-    "coverUrl": ""
+    "keywords": "public-domain, gutenberg:11, fantasy, project-gutenberg-cover",
+    "coverUrl": "data/covers/pg11.jpg"
   },
   {
     "title": "Dracula",
@@ -60,9 +60,9 @@
     "summary": "Letters and journals chronicle a group of friends confronting Count Dracula and his growing influence.",
     "pages": "418",
     "publisher": "Project Gutenberg",
-    "type": "Gothic Fiction",
-    "keywords": "public-domain, gutenberg:345, vampire, horror, original-cover",
-    "coverUrl": ""
+    "type": "Gothic & Horror",
+    "keywords": "public-domain, gutenberg:345, vampire, horror, project-gutenberg-cover",
+    "coverUrl": "data/covers/pg345.jpg"
   },
   {
     "title": "The Picture of Dorian Gray",
@@ -73,9 +73,9 @@
     "summary": "A portrait records the consequences of Dorian Gray's pursuit of beauty without regard for conscience.",
     "pages": "254",
     "publisher": "Project Gutenberg",
-    "type": "Literary Fiction",
-    "keywords": "public-domain, gutenberg:174, classic, original-cover",
-    "coverUrl": ""
+    "type": "Gothic & Horror",
+    "keywords": "public-domain, gutenberg:174, classic, project-gutenberg-cover",
+    "coverUrl": "data/covers/pg174.jpg"
   },
   {
     "title": "The Time Machine",
@@ -87,8 +87,8 @@
     "pages": "118",
     "publisher": "Project Gutenberg",
     "type": "Science Fiction",
-    "keywords": "public-domain, gutenberg:35, time-travel, original-cover",
-    "coverUrl": ""
+    "keywords": "public-domain, gutenberg:35, time-travel, project-gutenberg-cover",
+    "coverUrl": "data/covers/pg35.jpg"
   },
   {
     "title": "The War of the Worlds",
@@ -100,8 +100,8 @@
     "pages": "192",
     "publisher": "Project Gutenberg",
     "type": "Science Fiction",
-    "keywords": "public-domain, gutenberg:36, aliens, original-cover",
-    "coverUrl": ""
+    "keywords": "public-domain, gutenberg:36, aliens, project-gutenberg-cover",
+    "coverUrl": "data/covers/pg36.jpg"
   },
   {
     "title": "A Tale of Two Cities",
@@ -112,9 +112,9 @@
     "summary": "Lives in London and Paris intersect amid the upheaval and danger of the French Revolution.",
     "pages": "489",
     "publisher": "Project Gutenberg",
-    "type": "Historical Fiction",
-    "keywords": "public-domain, gutenberg:98, french-revolution, original-cover",
-    "coverUrl": ""
+    "type": "Classics",
+    "keywords": "public-domain, gutenberg:98, french-revolution, project-gutenberg-cover",
+    "coverUrl": "data/covers/pg98.jpg"
   },
   {
     "title": "Moby-Dick",
@@ -126,8 +126,8 @@
     "pages": "635",
     "publisher": "Project Gutenberg",
     "type": "Adventure",
-    "keywords": "public-domain, gutenberg:2701, sea, classic, original-cover",
-    "coverUrl": ""
+    "keywords": "public-domain, gutenberg:2701, sea, classic, project-gutenberg-cover",
+    "coverUrl": "data/covers/pg2701.jpg"
   },
   {
     "title": "The Secret Garden",
@@ -139,8 +139,8 @@
     "pages": "331",
     "publisher": "Project Gutenberg",
     "type": "Children's Classics",
-    "keywords": "public-domain, gutenberg:113, friendship, original-cover",
-    "coverUrl": ""
+    "keywords": "public-domain, gutenberg:113, friendship, project-gutenberg-cover",
+    "coverUrl": "data/covers/pg113.jpg"
   },
   {
     "title": "Jane Eyre",
@@ -151,9 +151,9 @@
     "summary": "Jane Eyre builds an independent life while working at Thornfield Hall and uncovering its secrets.",
     "pages": "532",
     "publisher": "Project Gutenberg",
-    "type": "Romance",
-    "keywords": "public-domain, gutenberg:1260, gothic, original-cover",
-    "coverUrl": ""
+    "type": "Classics",
+    "keywords": "public-domain, gutenberg:1260, gothic, project-gutenberg-cover",
+    "coverUrl": "data/covers/pg1260.jpg"
   },
   {
     "title": "Wuthering Heights",
@@ -164,9 +164,9 @@
     "summary": "A story of passion and resentment unfolds across generations on the Yorkshire moors.",
     "pages": "416",
     "publisher": "Project Gutenberg",
-    "type": "Romance",
-    "keywords": "public-domain, gutenberg:768, classic, original-cover",
-    "coverUrl": ""
+    "type": "Classics",
+    "keywords": "public-domain, gutenberg:768, classic, project-gutenberg-cover",
+    "coverUrl": "data/covers/pg768.jpg"
   },
   {
     "title": "The Call of the Wild",
@@ -178,8 +178,8 @@
     "pages": "172",
     "publisher": "Project Gutenberg",
     "type": "Adventure",
-    "keywords": "public-domain, gutenberg:215, nature, original-cover",
-    "coverUrl": ""
+    "keywords": "public-domain, gutenberg:215, nature, project-gutenberg-cover",
+    "coverUrl": "data/covers/pg215.jpg"
   },
   {
     "title": "The Yellow Wallpaper",
@@ -190,9 +190,9 @@
     "summary": "A woman confined to a room becomes increasingly absorbed by the pattern on its yellow wallpaper.",
     "pages": "64",
     "publisher": "Project Gutenberg",
-    "type": "Gothic Fiction",
-    "keywords": "public-domain, gutenberg:1952, short-story, original-cover",
-    "coverUrl": ""
+    "type": "Gothic & Horror",
+    "keywords": "public-domain, gutenberg:1952, short-story, project-gutenberg-cover",
+    "coverUrl": "data/covers/pg1952.jpg"
   },
   {
     "title": "The Odyssey",
@@ -203,9 +203,9 @@
     "summary": "Odysseus faces a long journey home after the Trojan War, meeting obstacles on land and sea.",
     "pages": "541",
     "publisher": "Project Gutenberg",
-    "type": "Epic Poetry",
-    "keywords": "public-domain, gutenberg:1727, mythology, original-cover",
-    "coverUrl": ""
+    "type": "Epic & Philosophy",
+    "keywords": "public-domain, gutenberg:1727, mythology, project-gutenberg-cover",
+    "coverUrl": "data/covers/pg1727.jpg"
   },
   {
     "title": "The Iliad",
@@ -216,9 +216,9 @@
     "summary": "The final weeks of the Trojan War are told through the conflict between Achilles and Agamemnon.",
     "pages": "683",
     "publisher": "Project Gutenberg",
-    "type": "Epic Poetry",
-    "keywords": "public-domain, gutenberg:6130, mythology, original-cover",
-    "coverUrl": ""
+    "type": "Epic & Philosophy",
+    "keywords": "public-domain, gutenberg:6130, mythology, project-gutenberg-cover",
+    "coverUrl": "data/covers/pg6130.jpg"
   },
   {
     "title": "Around the World in Eighty Days",
@@ -230,8 +230,8 @@
     "pages": "267",
     "publisher": "Project Gutenberg",
     "type": "Adventure",
-    "keywords": "public-domain, gutenberg:103, travel, original-cover",
-    "coverUrl": ""
+    "keywords": "public-domain, gutenberg:103, travel, project-gutenberg-cover",
+    "coverUrl": "data/covers/pg103.jpg"
   },
   {
     "title": "Twenty Thousand Leagues Under the Seas",
@@ -243,8 +243,8 @@
     "pages": "481",
     "publisher": "Project Gutenberg",
     "type": "Science Fiction",
-    "keywords": "public-domain, gutenberg:164, submarine, original-cover",
-    "coverUrl": ""
+    "keywords": "public-domain, gutenberg:164, submarine, project-gutenberg-cover",
+    "coverUrl": "data/covers/pg164.jpg"
   },
   {
     "title": "The Count of Monte Cristo",
@@ -256,8 +256,8 @@
     "pages": "1276",
     "publisher": "Project Gutenberg",
     "type": "Adventure",
-    "keywords": "public-domain, gutenberg:1184, revenge, original-cover",
-    "coverUrl": ""
+    "keywords": "public-domain, gutenberg:1184, revenge, project-gutenberg-cover",
+    "coverUrl": "data/covers/pg1184.jpg"
   },
   {
     "title": "Little Women",
@@ -268,9 +268,9 @@
     "summary": "The four March sisters grow up, pursue their ambitions, and support one another through change.",
     "pages": "759",
     "publisher": "Project Gutenberg",
-    "type": "Coming of Age",
-    "keywords": "public-domain, gutenberg:37106, family, original-cover",
-    "coverUrl": ""
+    "type": "Classics",
+    "keywords": "public-domain, gutenberg:37106, family, project-gutenberg-cover",
+    "coverUrl": "data/covers/pg37106.jpg"
   },
   {
     "title": "The Wonderful Wizard of Oz",
@@ -282,8 +282,8 @@
     "pages": "259",
     "publisher": "Project Gutenberg",
     "type": "Children's Classics",
-    "keywords": "public-domain, gutenberg:55, fantasy, original-cover",
-    "coverUrl": ""
+    "keywords": "public-domain, gutenberg:55, fantasy, project-gutenberg-cover",
+    "coverUrl": "data/covers/pg55.jpg"
   },
   {
     "title": "The Jungle Book",
@@ -295,8 +295,8 @@
     "pages": "302",
     "publisher": "Project Gutenberg",
     "type": "Children's Classics",
-    "keywords": "public-domain, gutenberg:236, fables, original-cover",
-    "coverUrl": ""
+    "keywords": "public-domain, gutenberg:236, fables, project-gutenberg-cover",
+    "coverUrl": "data/covers/pg236.jpg"
   },
   {
     "title": "The Prince",
@@ -307,9 +307,9 @@
     "summary": "A political treatise examines how rulers acquire, maintain, and lose power.",
     "pages": "128",
     "publisher": "Project Gutenberg",
-    "type": "Philosophy",
-    "keywords": "public-domain, gutenberg:1232, political-thought, original-cover",
-    "coverUrl": ""
+    "type": "Epic & Philosophy",
+    "keywords": "public-domain, gutenberg:1232, political-thought, project-gutenberg-cover",
+    "coverUrl": "data/covers/pg1232.jpg"
   },
   {
     "title": "The Art of War",
@@ -320,8 +320,8 @@
     "summary": "A concise classic on strategy, preparation, leadership, and understanding conflict.",
     "pages": "96",
     "publisher": "Project Gutenberg",
-    "type": "Philosophy",
-    "keywords": "public-domain, gutenberg:132, strategy, original-cover",
-    "coverUrl": ""
+    "type": "Epic & Philosophy",
+    "keywords": "public-domain, gutenberg:132, strategy, project-gutenberg-cover",
+    "coverUrl": "data/covers/pg132.jpg"
   }
 ]

@@ -222,6 +222,25 @@ public class BookDAO {
         return -1;
     }
 
+    public boolean updatePortfolioBook(int bookId, Map<String, String> book,
+            String catalogMarker) {
+        String updateSQL = "UPDATE books SET coverUrl = ?, type = ?, keywords = ? "
+                + "WHERE id = ? AND keywords LIKE ?";
+        try (Connection conn = getConnection();
+             PreparedStatement pstmt = conn.prepareStatement(updateSQL)) {
+            pstmt.setString(1, book.getOrDefault("coverUrl", ""));
+            pstmt.setString(2, book.getOrDefault("type", "Other"));
+            pstmt.setString(3, catalogMarker + ", " + book.getOrDefault("keywords", ""));
+            pstmt.setInt(4, bookId);
+            pstmt.setString(5, "%" + catalogMarker + "%");
+            return pstmt.executeUpdate() == 1;
+        } catch (SQLException e) {
+            System.err.println("Error updating portfolio book " + bookId + ": "
+                    + e.getMessage());
+            return false;
+        }
+    }
+
     /**
      * Update book stock quantity
      * @param bookId ID of the book to update

@@ -73,7 +73,7 @@ Le projet est conçu pour être extensible : il est facile d’ajouter de nouvel
 
 📚 Catalogue de démonstration
 Au démarrage, l’application complète automatiquement le catalogue jusqu’à 25 livres.
-Les titres ajoutés sont des classiques référencés par Project Gutenberg (identifiant
-de l’eBook conservé dans les mots-clés). Les couvertures de démonstration sont
-illustrées localement à partir du titre et de l’auteur ; aucune jaquette protégée
-n’est redistribuée.
+Le catalogue de démonstration est organisé en sept catégories. Les titres sont des
+classiques du domaine public référencés par Project Gutenberg. Les couvertures
+numérisées des éditions Project Gutenberg sont conservées localement dans
+`Babil/data/covers/`.
