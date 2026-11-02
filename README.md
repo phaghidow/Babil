@@ -83,3 +83,9 @@ numérisées des éditions Project Gutenberg sont conservées localement dans
 `Babil/data/covers/`, et les textes intégraux sont fournis en EPUB dans
 `Babil/data/ebooks/public-domain/`. Chaque édition conserve l’avis de source et
 la licence Project Gutenberg d’origine.
+
+## Captures de l’application
+
+| Mode clair | Mode sombre |
+|---|---|
+| ![Page d’accueil Babil en mode clair](Babil/home_page_light.png) | ![Page d’accueil Babil en mode sombre](Babil/home_page_dark.png) |
