@@ -1,63 +1,26 @@
-📚 BookstoreApp
+# Bābil Bookstore
 
-BookstoreApp est une application Java Swing simulant une librairie en ligne. Elle permet aux utilisateurs de parcourir une collection de livres, de les ajouter à un panier, de rechercher par titre ou catégorie, et de finaliser un achat. L'application utilise une architecture MVC (Modèle-Vue-Contrôleur) pour séparer clairement la logique métier, l'interface utilisateur et le contrôle des interactions.
+Bābil est une librairie numérique de démonstration réalisée en Java Swing. Parcourez le catalogue, filtrez les livres par catégorie, consultez leurs détails, ajoutez des titres au panier et retrouvez vos achats dans la bibliothèque.
 
-🗂 Structure du projet
-BookstoreApp/
-│
-├── src/
-│   ├── model/
-│   │   ├── Book.java              ← Modèle représentant un livre (titre, auteur, prix, catégorie, image)
-│   │   ├── Cart.java              ← Gestion du panier (liste des livres ajoutés)
-│   │   ├── Customer.java          ← Informations client (nom, email)
-│   │   └── Database.java          ← Simulation ou connexion SQLite
-│   │
-│   ├── view/
-│   │   ├── MainFrame.java         ← JFrame principale avec menu et CardLayout
-│   │   ├── HomePanel.java         ← Page d’accueil affichant tous les livres
-│   │   ├── BookDetailsPanel.java  ← Page détaillée d’un livre
-│   │   ├── SearchPanel.java       ← Résultats de recherche
-│   │   ├── CartPanel.java         ← Panier (affichage des livres sélectionnés)
-│   │   ├── CheckoutPanel.java     ← Page d’achat / confirmation
-│   │   └── components/
-│   │       └── BookCard.java      ← Composant graphique pour un livre (image, titre, bouton)
-│   │
-│   ├── controller/
-│   │   ├── BookController.java    ← Chargement des livres, filtrage par catégorie
-│   │   ├── CartController.java    ← Gestion du panier (ajout, suppression)
-│   │   └── NavigationController.java ← Navigation entre écrans via CardLayout
-│   │
-│   └── Main.java                   ← Point d’entrée de l’application
-│
-└── data/
-    ├── images/                     ← Couvertures des livres
-    └── bookstore.db                ← Base de données SQLite (optionnelle)
-⚙️ Fonctionnalités principales
-Parcourir les livres
-Affichage en grille de tous les livres disponibles.
-Chaque livre est représenté par une BookCard avec image, titre, auteur et bouton “Ajouter au panier”.
-Détails d’un livre
-En cliquant sur un livre, l’utilisateur accède à sa page détaillée avec description complète, prix et options.
-Recherche et filtrage
-Rechercher un livre par titre ou filtrer par catégorie grâce au BookController.
-Les résultats s’affichent dynamiquement dans SearchPanel.
-Gestion du panier
-Ajouter ou retirer des livres du panier via CartController.
-Affichage du panier dans CartPanel, avec total calculé automatiquement.
-Finalisation de l’achat
-CheckoutPanel permet à l’utilisateur de saisir ses informations (nom, email) et de confirmer la commande.
-Navigation fluide
-Le NavigationController gère le passage entre les différents écrans grâce au CardLayout, garantissant une interface cohérente et réactive.
-Gestion des données
-Simulation interne des livres ou persistance via SQLite.
-Images des couvertures stockées dans data/images/.
-🛠 Technologies utilisées
-Java SE 8+
-Java Swing pour l’interface graphique
-SQLite (optionnel) pour la persistance des données
-Architecture MVC pour séparer la logique et l’interface
-🚀 Lancer l’application (Windows / PowerShell)
-Depuis la racine du dépôt :
+## Captures de l’application
+
+| Mode clair | Mode sombre |
+|---|---|
+| ![Page d’accueil en mode clair](Babil/home_page_light.png) | ![Page d’accueil en mode sombre](Babil/home_page_dark.png) |
+
+## Fonctionnalités
+
+- Catalogue de 25 livres répartis en sept catégories.
+- Couvertures locales et éditions numériques EPUB.
+- Recherche, filtres, détails, panier et bibliothèque.
+- Interface disponible en modes clair et sombre.
+- Checkout simulé pour les démonstrations : aucun paiement réel n’est traité.
+
+## Lancer l’application
+
+Prérequis : un JDK 11 ou plus récent. Le pilote JDBC SQLite est fourni dans le dépôt.
+
+Depuis la racine du dépôt, dans PowerShell :
 
 ```powershell
 cd Babil
@@ -66,26 +29,15 @@ javac -encoding UTF-8 -cp "lib\sqlite-jdbc-3.51.0.0.jar" -d bin $sources
 java -cp "bin;lib\sqlite-jdbc-3.51.0.0.jar" App
 ```
 
-Le premier lancement complète le catalogue depuis `data/portfolio_books.json`.
-Les éditions EPUB et leurs couvertures sont stockées localement dans `data/`.
-Le checkout est une simulation pour la démonstration ; aucun paiement réel
-n’est traité.
+Au premier lancement, l’application initialise le catalogue dans `data/books.db` à partir de `data/portfolio_books.json`.
 
-📌 Remarques
-L’interface est entièrement modulable grâce aux composants Swing et au CardLayout.
-Le projet est conçu pour être extensible : il est facile d’ajouter de nouvelles catégories de livres, de nouvelles fonctionnalités de recherche, ou une vraie connexion à une base de données.
+## Données du catalogue
 
-📚 Catalogue de démonstration
-Au démarrage, l’application complète automatiquement le catalogue jusqu’à 25 livres.
-Le catalogue de démonstration est organisé en sept catégories. Les titres sont des
-classiques du domaine public référencés par Project Gutenberg. Les couvertures
-numérisées des éditions Project Gutenberg sont conservées localement dans
-`Babil/data/covers/`, et les textes intégraux sont fournis en EPUB dans
-`Babil/data/ebooks/public-domain/`. Chaque édition conserve l’avis de source et
-la licence Project Gutenberg d’origine.
+Les livres sont des classiques du domaine public référencés par Project Gutenberg. Les couvertures sont stockées dans `Babil/data/covers/` et les éditions EPUB complètes dans `Babil/data/ebooks/public-domain/`. Chaque édition conserve les notices de source et de licence de Project Gutenberg.
 
-## Captures de l’application
+## Contenu du dépôt
 
-| Mode clair | Mode sombre |
-|---|---|
-| ![Page d’accueil Babil en mode clair](Babil/home_page_light.png) | ![Page d’accueil Babil en mode sombre](Babil/home_page_dark.png) |
+- `Babil/src/` : application Java Swing, avec le point d’entrée `App.java`, les modèles et les écrans.
+- `Babil/data/` : catalogue JSON, base SQLite, couvertures et éditions EPUB.
+- `Babil/lib/` : pilote JDBC SQLite utilisé pour compiler et lancer l’application.
+- `Babil/bin/` : classes Java compilées.
