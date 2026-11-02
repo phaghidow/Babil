@@ -198,7 +198,7 @@ public class BookstorePage extends JPanel {
         search.setPreferredSize(new Dimension(240, 38));
         search.setMaximumSize(new Dimension(245, 38));
         searchField = new JTextField(searchQuery.isBlank()
-                ? "Search e-books, authors, topics..." : searchQuery, 18);
+                ? "Search e-books, authors..." : searchQuery, 18);
         searchField.setFont(new Font("Segoe UI", Font.PLAIN, 13));
         boolean[] searchHint = {searchQuery.isBlank()};
         searchField.setForeground(searchHint[0] ? mutedColor() : textColor());
