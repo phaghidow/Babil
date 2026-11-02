@@ -56,16 +56,20 @@ Java SE 8+
 Java Swing pour l’interface graphique
 SQLite (optionnel) pour la persistance des données
 Architecture MVC pour séparer la logique et l’interface
-🚀 Lancer l’application
-Cloner le dépôt :
-git clone <URL_DU_REPO>
-Compiler les sources :
-cd BookstoreApp/src
-javac Main.java
-Lancer l’application :
-java Main
+🚀 Lancer l’application (Windows / PowerShell)
+Depuis la racine du dépôt :
 
-Si vous utilisez SQLite, assurez-vous que bookstore.db est présent dans data/.
+```powershell
+cd Babil
+$sources = Get-ChildItem -Recurse src -Filter *.java | ForEach-Object FullName
+javac -encoding UTF-8 -cp "lib\sqlite-jdbc-3.51.0.0.jar" -d bin $sources
+java -cp "bin;lib\sqlite-jdbc-3.51.0.0.jar" App
+```
+
+Le premier lancement complète le catalogue depuis `data/portfolio_books.json`.
+Les éditions EPUB et leurs couvertures sont stockées localement dans `data/`.
+Le checkout est une simulation pour la démonstration ; aucun paiement réel
+n’est traité.
 
 📌 Remarques
 L’interface est entièrement modulable grâce aux composants Swing et au CardLayout.
@@ -76,4 +80,6 @@ Au démarrage, l’application complète automatiquement le catalogue jusqu’à
 Le catalogue de démonstration est organisé en sept catégories. Les titres sont des
 classiques du domaine public référencés par Project Gutenberg. Les couvertures
 numérisées des éditions Project Gutenberg sont conservées localement dans
-`Babil/data/covers/`.
+`Babil/data/covers/`, et les textes intégraux sont fournis en EPUB dans
+`Babil/data/ebooks/public-domain/`. Chaque édition conserve l’avis de source et
+la licence Project Gutenberg d’origine.

@@ -38,7 +38,9 @@ public final class PortfolioCatalogSeeder {
                                 .equals(book.getOrDefault("type", "Other"))
                         || !(CATALOG_MARKER + ", "
                                 + catalogBook.getOrDefault("keywords", ""))
-                                .equals(book.getOrDefault("keywords", "")));
+                                .equals(book.getOrDefault("keywords", ""))
+                        || !catalogBook.getOrDefault("ebookPath", "")
+                                .equals(book.getOrDefault("ebookPath", "")));
                 if (metadataChanged
                         && !bookDAO.updatePortfolioBook(
                                 Integer.parseInt(book.get("id")), catalogBook, CATALOG_MARKER)) {
@@ -63,7 +65,9 @@ public final class PortfolioCatalogSeeder {
             }
 
             book.put("stock", "0");
-            book.put("ebookPath", "");
+            if (book.getOrDefault("ebookPath", "").isBlank()) {
+                throw new IOException("Missing e-book path for portfolio title: " + title);
+            }
             book.put("keywords", CATALOG_MARKER + ", "
                     + book.getOrDefault("keywords", ""));
             if (bookDAO.addBook(book) < 0) {

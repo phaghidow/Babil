@@ -68,6 +68,7 @@ public class JsonToSqliteMigration {
             map.put("summary", extractString(obj, "summary"));
             map.put("pages", extractString(obj, "pages"));
             map.put("publisher", extractString(obj, "publisher"));
+            map.put("ebookPath", extractString(obj, "ebookPath"));
             
             String type = extractString(obj, "type");
             if (type == null || type.isEmpty()) type = "Other";

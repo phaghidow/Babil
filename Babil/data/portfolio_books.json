@@ -10,7 +10,8 @@
     "publisher": "Project Gutenberg",
     "type": "Classics",
     "keywords": "public-domain, gutenberg:1342, classic, project-gutenberg-cover",
-    "coverUrl": "data/covers/pg1342.jpg"
+    "coverUrl": "data/covers/pg1342.jpg",
+    "ebookPath": "data/ebooks/public-domain/pg1342.epub"
   },
   {
     "title": "The Adventures of Sherlock Holmes",
@@ -23,7 +24,8 @@
     "publisher": "Project Gutenberg",
     "type": "Mystery",
     "keywords": "public-domain, gutenberg:1661, detective, project-gutenberg-cover",
-    "coverUrl": "data/covers/pg1661.jpg"
+    "coverUrl": "data/covers/pg1661.jpg",
+    "ebookPath": "data/ebooks/public-domain/pg1661.epub"
   },
   {
     "title": "Frankenstein",
@@ -36,7 +38,8 @@
     "publisher": "Project Gutenberg",
     "type": "Gothic & Horror",
     "keywords": "public-domain, gutenberg:84, gothic, science, project-gutenberg-cover",
-    "coverUrl": "data/covers/pg84.jpg"
+    "coverUrl": "data/covers/pg84.jpg",
+    "ebookPath": "data/ebooks/public-domain/pg84.epub"
   },
   {
     "title": "Alice's Adventures in Wonderland",
@@ -49,7 +52,8 @@
     "publisher": "Project Gutenberg",
     "type": "Children's Classics",
     "keywords": "public-domain, gutenberg:11, fantasy, project-gutenberg-cover",
-    "coverUrl": "data/covers/pg11.jpg"
+    "coverUrl": "data/covers/pg11.jpg",
+    "ebookPath": "data/ebooks/public-domain/pg11.epub"
   },
   {
     "title": "Dracula",
@@ -62,7 +66,8 @@
     "publisher": "Project Gutenberg",
     "type": "Gothic & Horror",
     "keywords": "public-domain, gutenberg:345, vampire, horror, project-gutenberg-cover",
-    "coverUrl": "data/covers/pg345.jpg"
+    "coverUrl": "data/covers/pg345.jpg",
+    "ebookPath": "data/ebooks/public-domain/pg345.epub"
   },
   {
     "title": "The Picture of Dorian Gray",
@@ -75,7 +80,8 @@
     "publisher": "Project Gutenberg",
     "type": "Gothic & Horror",
     "keywords": "public-domain, gutenberg:174, classic, project-gutenberg-cover",
-    "coverUrl": "data/covers/pg174.jpg"
+    "coverUrl": "data/covers/pg174.jpg",
+    "ebookPath": "data/ebooks/public-domain/pg174.epub"
   },
   {
     "title": "The Time Machine",
@@ -88,7 +94,8 @@
     "publisher": "Project Gutenberg",
     "type": "Science Fiction",
     "keywords": "public-domain, gutenberg:35, time-travel, project-gutenberg-cover",
-    "coverUrl": "data/covers/pg35.jpg"
+    "coverUrl": "data/covers/pg35.jpg",
+    "ebookPath": "data/ebooks/public-domain/pg35.epub"
   },
   {
     "title": "The War of the Worlds",
@@ -101,7 +108,8 @@
     "publisher": "Project Gutenberg",
     "type": "Science Fiction",
     "keywords": "public-domain, gutenberg:36, aliens, project-gutenberg-cover",
-    "coverUrl": "data/covers/pg36.jpg"
+    "coverUrl": "data/covers/pg36.jpg",
+    "ebookPath": "data/ebooks/public-domain/pg36.epub"
   },
   {
     "title": "A Tale of Two Cities",
@@ -114,7 +122,8 @@
     "publisher": "Project Gutenberg",
     "type": "Classics",
     "keywords": "public-domain, gutenberg:98, french-revolution, project-gutenberg-cover",
-    "coverUrl": "data/covers/pg98.jpg"
+    "coverUrl": "data/covers/pg98.jpg",
+    "ebookPath": "data/ebooks/public-domain/pg98.epub"
   },
   {
     "title": "Moby-Dick",
@@ -127,7 +136,8 @@
     "publisher": "Project Gutenberg",
     "type": "Adventure",
     "keywords": "public-domain, gutenberg:2701, sea, classic, project-gutenberg-cover",
-    "coverUrl": "data/covers/pg2701.jpg"
+    "coverUrl": "data/covers/pg2701.jpg",
+    "ebookPath": "data/ebooks/public-domain/pg2701.epub"
   },
   {
     "title": "The Secret Garden",
@@ -140,7 +150,8 @@
     "publisher": "Project Gutenberg",
     "type": "Children's Classics",
     "keywords": "public-domain, gutenberg:113, friendship, project-gutenberg-cover",
-    "coverUrl": "data/covers/pg113.jpg"
+    "coverUrl": "data/covers/pg113.jpg",
+    "ebookPath": "data/ebooks/public-domain/pg113.epub"
   },
   {
     "title": "Jane Eyre",
@@ -153,7 +164,8 @@
     "publisher": "Project Gutenberg",
     "type": "Classics",
     "keywords": "public-domain, gutenberg:1260, gothic, project-gutenberg-cover",
-    "coverUrl": "data/covers/pg1260.jpg"
+    "coverUrl": "data/covers/pg1260.jpg",
+    "ebookPath": "data/ebooks/public-domain/pg1260.epub"
   },
   {
     "title": "Wuthering Heights",
@@ -166,7 +178,8 @@
     "publisher": "Project Gutenberg",
     "type": "Classics",
     "keywords": "public-domain, gutenberg:768, classic, project-gutenberg-cover",
-    "coverUrl": "data/covers/pg768.jpg"
+    "coverUrl": "data/covers/pg768.jpg",
+    "ebookPath": "data/ebooks/public-domain/pg768.epub"
   },
   {
     "title": "The Call of the Wild",
@@ -179,7 +192,8 @@
     "publisher": "Project Gutenberg",
     "type": "Adventure",
     "keywords": "public-domain, gutenberg:215, nature, project-gutenberg-cover",
-    "coverUrl": "data/covers/pg215.jpg"
+    "coverUrl": "data/covers/pg215.jpg",
+    "ebookPath": "data/ebooks/public-domain/pg215.epub"
   },
   {
     "title": "The Yellow Wallpaper",
@@ -192,7 +206,8 @@
     "publisher": "Project Gutenberg",
     "type": "Gothic & Horror",
     "keywords": "public-domain, gutenberg:1952, short-story, project-gutenberg-cover",
-    "coverUrl": "data/covers/pg1952.jpg"
+    "coverUrl": "data/covers/pg1952.jpg",
+    "ebookPath": "data/ebooks/public-domain/pg1952.epub"
   },
   {
     "title": "The Odyssey",
@@ -205,7 +220,8 @@
     "publisher": "Project Gutenberg",
     "type": "Epic & Philosophy",
     "keywords": "public-domain, gutenberg:1727, mythology, project-gutenberg-cover",
-    "coverUrl": "data/covers/pg1727.jpg"
+    "coverUrl": "data/covers/pg1727.jpg",
+    "ebookPath": "data/ebooks/public-domain/pg1727.epub"
   },
   {
     "title": "The Iliad",
@@ -218,7 +234,8 @@
     "publisher": "Project Gutenberg",
     "type": "Epic & Philosophy",
     "keywords": "public-domain, gutenberg:6130, mythology, project-gutenberg-cover",
-    "coverUrl": "data/covers/pg6130.jpg"
+    "coverUrl": "data/covers/pg6130.jpg",
+    "ebookPath": "data/ebooks/public-domain/pg6130.epub"
   },
   {
     "title": "Around the World in Eighty Days",
@@ -231,7 +248,8 @@
     "publisher": "Project Gutenberg",
     "type": "Adventure",
     "keywords": "public-domain, gutenberg:103, travel, project-gutenberg-cover",
-    "coverUrl": "data/covers/pg103.jpg"
+    "coverUrl": "data/covers/pg103.jpg",
+    "ebookPath": "data/ebooks/public-domain/pg103.epub"
   },
   {
     "title": "Twenty Thousand Leagues Under the Seas",
@@ -244,7 +262,8 @@
     "publisher": "Project Gutenberg",
     "type": "Science Fiction",
     "keywords": "public-domain, gutenberg:164, submarine, project-gutenberg-cover",
-    "coverUrl": "data/covers/pg164.jpg"
+    "coverUrl": "data/covers/pg164.jpg",
+    "ebookPath": "data/ebooks/public-domain/pg164.epub"
   },
   {
     "title": "The Count of Monte Cristo",
@@ -257,7 +276,8 @@
     "publisher": "Project Gutenberg",
     "type": "Adventure",
     "keywords": "public-domain, gutenberg:1184, revenge, project-gutenberg-cover",
-    "coverUrl": "data/covers/pg1184.jpg"
+    "coverUrl": "data/covers/pg1184.jpg",
+    "ebookPath": "data/ebooks/public-domain/pg1184.epub"
   },
   {
     "title": "Little Women",
@@ -270,7 +290,8 @@
     "publisher": "Project Gutenberg",
     "type": "Classics",
     "keywords": "public-domain, gutenberg:37106, family, project-gutenberg-cover",
-    "coverUrl": "data/covers/pg37106.jpg"
+    "coverUrl": "data/covers/pg37106.jpg",
+    "ebookPath": "data/ebooks/public-domain/pg37106.epub"
   },
   {
     "title": "The Wonderful Wizard of Oz",
@@ -283,7 +304,8 @@
     "publisher": "Project Gutenberg",
     "type": "Children's Classics",
     "keywords": "public-domain, gutenberg:55, fantasy, project-gutenberg-cover",
-    "coverUrl": "data/covers/pg55.jpg"
+    "coverUrl": "data/covers/pg55.jpg",
+    "ebookPath": "data/ebooks/public-domain/pg55.epub"
   },
   {
     "title": "The Jungle Book",
@@ -296,7 +318,8 @@
     "publisher": "Project Gutenberg",
     "type": "Children's Classics",
     "keywords": "public-domain, gutenberg:236, fables, project-gutenberg-cover",
-    "coverUrl": "data/covers/pg236.jpg"
+    "coverUrl": "data/covers/pg236.jpg",
+    "ebookPath": "data/ebooks/public-domain/pg236.epub"
   },
   {
     "title": "The Prince",
@@ -309,7 +332,8 @@
     "publisher": "Project Gutenberg",
     "type": "Epic & Philosophy",
     "keywords": "public-domain, gutenberg:1232, political-thought, project-gutenberg-cover",
-    "coverUrl": "data/covers/pg1232.jpg"
+    "coverUrl": "data/covers/pg1232.jpg",
+    "ebookPath": "data/ebooks/public-domain/pg1232.epub"
   },
   {
     "title": "The Art of War",
@@ -322,6 +346,7 @@
     "publisher": "Project Gutenberg",
     "type": "Epic & Philosophy",
     "keywords": "public-domain, gutenberg:132, strategy, project-gutenberg-cover",
-    "coverUrl": "data/covers/pg132.jpg"
+    "coverUrl": "data/covers/pg132.jpg",
+    "ebookPath": "data/ebooks/public-domain/pg132.epub"
   }
 ]
