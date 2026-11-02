@@ -12,7 +12,6 @@ public class HomePage extends JPanel {
     // Colors now come from Theme
     
     private JPanel contentPanel;
-    private boolean isDark = false;
     
     public HomePage(Runnable onExplore, Runnable onCart) {
         this.onExplore = onExplore;
@@ -117,12 +116,6 @@ public class HomePage extends JPanel {
         btn.setFont(new Font("Segoe UI", Font.BOLD, 13));
         btn.setPreferredSize(new Dimension(150, 42));
         return btn;
-    }
-    
-    private void toggleTheme() {
-        isDark = !isDark;
-        updateTheme();
-        repaint();
     }
     
     private void updateTheme() {

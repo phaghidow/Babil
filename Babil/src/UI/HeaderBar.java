@@ -3,7 +3,6 @@ package UI;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-import java.awt.geom.RoundRectangle2D;
 
 /**
  * Professional HeaderBar component for Babil Bookstore

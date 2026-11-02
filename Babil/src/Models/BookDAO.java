@@ -40,15 +40,36 @@ public class BookDAO {
             "  type TEXT," +
             "  keywords TEXT," +
             "  stock INTEGER DEFAULT 0," +
-            "  added_to_cart INTEGER DEFAULT 0" +
+            "  added_to_cart INTEGER DEFAULT 0," +
+            "  ebookPath TEXT NOT NULL DEFAULT ''" +
             ")";
 
         try (Connection conn = getConnection();
              Statement stmt = conn.createStatement()) {
             stmt.executeUpdate(createTableSQL);
+            ensureEbookPathColumn(conn);
             System.out.println("Database initialized successfully at: " + dbPath);
         } catch (SQLException e) {
             System.err.println("Error initializing database: " + e.getMessage());
+        }
+    }
+
+    private void ensureEbookPathColumn(Connection conn) throws SQLException {
+        boolean columnExists = false;
+        try (Statement statement = conn.createStatement();
+             ResultSet columns = statement.executeQuery("PRAGMA table_info(books)")) {
+            while (columns.next()) {
+                if ("ebookPath".equalsIgnoreCase(columns.getString("name"))) {
+                    columnExists = true;
+                    break;
+                }
+            }
+        }
+        if (!columnExists) {
+            try (Statement statement = conn.createStatement()) {
+                statement.executeUpdate(
+                        "ALTER TABLE books ADD COLUMN ebookPath TEXT NOT NULL DEFAULT ''");
+            }
         }
     }
 
@@ -102,6 +123,7 @@ public class BookDAO {
                 book.put("keywords", rs.getString("keywords"));
                 book.put("stock", String.valueOf(rs.getInt("stock")));
                 book.put("added_to_cart", rs.getInt("added_to_cart") == 1 ? "true" : "false");
+                book.put("ebookPath", rs.getString("ebookPath"));
                 books.add(book);
             }
             System.out.println("Retrieved " + books.size() + " books from database");
@@ -141,6 +163,7 @@ public class BookDAO {
                     book.put("keywords", rs.getString("keywords"));
                     book.put("stock", String.valueOf(rs.getInt("stock")));
                     book.put("added_to_cart", rs.getInt("added_to_cart") == 1 ? "true" : "false");
+                    book.put("ebookPath", rs.getString("ebookPath"));
                     System.out.println("Retrieved book: " + rs.getString("title"));
                 } else {
                     System.out.println("Book with ID " + bookId + " not found");
@@ -160,8 +183,8 @@ public class BookDAO {
      */
     public int addBook(Map<String, String> book) {
         String insertSQL =
-            "INSERT INTO books (coverUrl, title, author, price, rating, language, summary, pages, publisher, type, keywords, stock, added_to_cart) " +
-            "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            "INSERT INTO books (coverUrl, title, author, price, rating, language, summary, pages, publisher, type, keywords, stock, added_to_cart, ebookPath) " +
+            "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
         try (Connection conn = getConnection();
              PreparedStatement pstmt = conn.prepareStatement(insertSQL, Statement.RETURN_GENERATED_KEYS)) {
@@ -179,6 +202,7 @@ public class BookDAO {
             pstmt.setString(11, book.getOrDefault("keywords", ""));
             pstmt.setInt(12, parseInt(book.getOrDefault("stock", "0")));
             pstmt.setInt(13, "true".equalsIgnoreCase(book.getOrDefault("added_to_cart", "false")) ? 1 : 0);
+            pstmt.setString(14, book.getOrDefault("ebookPath", ""));
 
             int rowsAffected = pstmt.executeUpdate();
 
@@ -293,6 +317,7 @@ public class BookDAO {
                     book.put("keywords", rs.getString("keywords"));
                     book.put("stock", String.valueOf(rs.getInt("stock")));
                     book.put("added_to_cart", rs.getInt("added_to_cart") == 1 ? "true" : "false");
+                    book.put("ebookPath", rs.getString("ebookPath"));
                     results.add(book);
                 }
                 System.out.println("Found " + results.size() + " books matching: " + query);
@@ -374,6 +399,7 @@ public class BookDAO {
                     book.put("keywords", rs.getString("keywords"));
                     book.put("stock", String.valueOf(rs.getInt("stock")));
                     book.put("added_to_cart", rs.getInt("added_to_cart") == 1 ? "true" : "false");
+                    book.put("ebookPath", rs.getString("ebookPath"));
                     books.add(book);
                 }
             }

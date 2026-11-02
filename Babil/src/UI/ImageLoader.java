@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
+import java.net.URI;
 import java.net.URL;
 import javax.imageio.ImageIO;
 
@@ -35,7 +36,7 @@ public class ImageLoader {
             // Support web URLs (http/https)
             if (imagePath.startsWith("http://") || imagePath.startsWith("https://")) {
                 try {
-                    URL url = new URL(imagePath);
+                    URL url = URI.create(imagePath).toURL();
                     originalImage = ImageIO.read(url);
                 } catch (Exception e) {
                     return createPlaceholder(width, height);

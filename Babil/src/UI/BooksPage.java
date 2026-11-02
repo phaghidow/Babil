@@ -20,16 +20,12 @@ public class BooksPage extends JPanel {
     private JLabel cartBadge;
     private JPanel gridContent;
     private HeaderBar headerBar;
-    // Use a single-column vertical card layout by default
-    private final int currentColumns = 1;
-    
     // Colors pulled from global Theme
     private static final Color BG = Theme.getBackground();
     private static final Color CARD_BG = Theme.getCardBackground();
     private static final Color PRIMARY = Theme.BUTTON;
     private static final Color TEXT_DARK = Theme.getTextColor();
     private static final Color TEXT_GRAY = new Color(0x888888);
-    private static final Color HOVER = Theme.BUTTON_HOVER;
     private static final Color SEPARATOR = Theme.getBorderColor();
     
     // Constructor with callback for showing cart
@@ -437,4 +433,3 @@ public class BooksPage extends JPanel {
         return cartItems;
     }
 }
-

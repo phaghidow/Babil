@@ -8,7 +8,7 @@ public class App {
     private static JFrame mainFrame;
     private static CardLayout cardLayout;
     private static JPanel cardPanel;
-    private static Map<Integer, Integer> cartItems = new HashMap<>();
+    private static final Map<Integer, Integer> cartItems = new HashMap<>();
     
     public static void main(String[] args) throws Exception {
         final String dbPath = "data/books.db";
@@ -19,10 +19,16 @@ public class App {
         
         if (booksFromDb.isEmpty()) {
             System.out.println("Migrating books...");
-            JsonToSqliteMigration.migrateBooks("data/books.json", dbPath);
+            String catalogPath = java.nio.file.Files.isRegularFile(
+                    java.nio.file.Path.of("data/books.json"))
+                    ? "data/books.json" : "data/example_books.json";
+            JsonToSqliteMigration.migrateBooks(catalogPath, dbPath);
             booksFromDb = bookDAO.getAllBooks();
         }
-        
+
+        DemoEbookSeeder.seedShowcaseIfNeeded(bookDAO);
+        PortfolioCatalogSeeder.seedIfNeeded(bookDAO);
+        booksFromDb = bookDAO.getAllBooks();
         System.out.println("Loaded " + booksFromDb.size() + " books");
         SwingUtilities.invokeLater(() -> createMainWindow(bookDAO, purchaseDAO));
     }
@@ -36,20 +42,14 @@ public class App {
         
         cardLayout = new CardLayout();
         cardPanel = new JPanel(cardLayout);
-        cardPanel.setBackground(new Color(0xF4F4F4));
-        
-        HomePage homePage = new HomePage(() -> showPage("books"), () -> showPage("cart"));
-        BooksPage booksPage = new BooksPage(bookDAO, cartItems, () -> showPage("home"));
-        CartPage cartPage = new CartPage(bookDAO, purchaseDAO, cartItems, () -> showPage("home"));
-        
-        cardPanel.add(homePage, "home");
-        cardPanel.add(booksPage, "books");
-        cardPanel.add(cartPage, "cart");
+        cardPanel.setBackground(Theme.getBackground());
+        cardPanel.add(new BookstorePage(bookDAO, purchaseDAO, cartItems), "store");
         
         mainFrame.add(cardPanel, BorderLayout.CENTER);
+        cardLayout.show(cardPanel, "store");
         mainFrame.setVisible(true);
     }
-    
+
     private static void showPage(String pageName) {
         cardLayout.show(cardPanel, pageName);
     }

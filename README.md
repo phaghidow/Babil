@@ -70,3 +70,10 @@ Si vous utilisez SQLite, assurez-vous que bookstore.db est présent dans data/.
 📌 Remarques
 L’interface est entièrement modulable grâce aux composants Swing et au CardLayout.
 Le projet est conçu pour être extensible : il est facile d’ajouter de nouvelles catégories de livres, de nouvelles fonctionnalités de recherche, ou une vraie connexion à une base de données.
+
+📚 Catalogue de démonstration
+Au démarrage, l’application complète automatiquement le catalogue jusqu’à 25 livres.
+Les titres ajoutés sont des classiques référencés par Project Gutenberg (identifiant
+de l’eBook conservé dans les mots-clés). Les couvertures de démonstration sont
+illustrées localement à partir du titre et de l’auteur ; aucune jaquette protégée
+n’est redistribuée.
