@@ -93,6 +93,11 @@ public final class DemoEbookSeeder {
 
     public static void seedShowcaseIfNeeded(BookDAO bookDAO) throws IOException {
         List<Map<String, String>> existingBooks = bookDAO.getAllBooks();
+        if (existingBooks.stream().anyMatch(book ->
+                book.getOrDefault("keywords", "")
+                        .contains(PortfolioCatalogSeeder.CATALOG_MARKER))) {
+            return;
+        }
         for (Map<String, String> book : existingBooks) {
             String path = book.getOrDefault("ebookPath", "");
             String lowerPath = path.toLowerCase();

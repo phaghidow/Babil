@@ -18,11 +18,18 @@ public class App {
         java.util.List<java.util.Map<String, String>> booksFromDb = bookDAO.getAllBooks();
         
         if (booksFromDb.isEmpty()) {
-            System.out.println("Migrating books...");
-            String catalogPath = java.nio.file.Files.isRegularFile(
-                    java.nio.file.Path.of("data/books.json"))
-                    ? "data/books.json" : "data/example_books.json";
-            JsonToSqliteMigration.migrateBooks(catalogPath, dbPath);
+            java.nio.file.Path userCatalog = java.nio.file.Path.of("data/books.json");
+            java.nio.file.Path portfolioCatalog =
+                    java.nio.file.Path.of("data/portfolio_books.json");
+            if (java.nio.file.Files.isRegularFile(userCatalog)) {
+                System.out.println("Migrating user catalog...");
+                JsonToSqliteMigration.migrateBooks(userCatalog.toString(), dbPath);
+            } else if (java.nio.file.Files.isRegularFile(portfolioCatalog)) {
+                PortfolioCatalogSeeder.seedIfNeeded(bookDAO);
+            } else {
+                System.out.println("Migrating example books...");
+                JsonToSqliteMigration.migrateBooks("data/example_books.json", dbPath);
+            }
             booksFromDb = bookDAO.getAllBooks();
         }
 

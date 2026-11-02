@@ -3,10 +3,12 @@ package Models;
 import java.io.IOException;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 import java.util.Set;
 
 public final class PortfolioCatalogSeeder {
+    static final String CATALOG_MARKER = "babil-portfolio-catalog";
     private static final int TARGET_BOOK_COUNT = 25;
 
     private PortfolioCatalogSeeder() {
@@ -20,7 +22,7 @@ public final class PortfolioCatalogSeeder {
 
         Set<String> existingTitles = new HashSet<>();
         for (Map<String, String> book : existingBooks) {
-            existingTitles.add(book.getOrDefault("title", "").trim().toLowerCase());
+            existingTitles.add(book.getOrDefault("title", "").trim().toLowerCase(Locale.ROOT));
         }
 
         List<Map<String, String>> portfolioBooks =
@@ -31,12 +33,14 @@ public final class PortfolioCatalogSeeder {
                 break;
             }
             String title = book.getOrDefault("title", "").trim();
-            if (title.isEmpty() || !existingTitles.add(title.toLowerCase())) {
+            if (title.isEmpty() || !existingTitles.add(title.toLowerCase(Locale.ROOT))) {
                 continue;
             }
 
             book.put("stock", "0");
             book.put("ebookPath", "");
+            book.put("keywords", CATALOG_MARKER + ", "
+                    + book.getOrDefault("keywords", ""));
             if (bookDAO.addBook(book) < 0) {
                 throw new IOException("Could not add portfolio book: " + title);
             }
